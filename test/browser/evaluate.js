@@ -49,7 +49,7 @@ var chrome = browser(function() {
           line: 3,
           column : 17,
           url: '',
-          repeatCount: 1,
+          executionContextId: 1,
           parameters: [{
             type: 'string',
             value: 'standard console logging'
@@ -73,7 +73,7 @@ var chrome = browser(function() {
       function(err, result) {
         t.equal(
           err.message,
-          'TypeError: Cannot call method \'pleaseFail\' of undefined'
+          'TypeError: Cannot read property \'pleaseFail\' of undefined'
         );
         t.equal(result, null);
         t.end();
